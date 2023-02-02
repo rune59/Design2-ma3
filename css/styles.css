@@ -1,0 +1,293 @@
+/*--------------------------------------------------------------
+Content in this file: 
+	- Import of other css-files
+	- General styling
+	- Links
+	- Styling images
+	- Styling the heading of the project
+	- Styling the Introduction section
+	- Styling the Decor and products examples section
+	- Styling the About section
+	- Styling the My design choices section
+	- Styling the products page
+	- Styling the projects for justifications of the screen width
+		- 1. Use flex to create a three-project layout
+		- 2. CSS Grid layout for wider screens, when browser supports grid
+
+--------------------------------------------------------------*/
+
+
+
+
+
+/*--------------------------------------------------------------
+Import of other css-files
+--------------------------------------------------------------*/
+@import "imports/globals.css";
+@import "imports/navigation.css";
+@import "imports/footer.css";
+@import "imports/typography.css";
+@import "imports/mediaQuery.css";
+
+
+
+
+/*--------------------------------------------------------------
+General styling
+--------------------------------------------------------------*/
+
+* {
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;    margin: 0;
+}
+
+body {
+	font-family: var(--font-family-1);
+	font-size: 20px;
+    font-weight: 400;
+	line-height: 1.5;
+	color: var(--color-text-body);
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+	
+}
+
+header {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-background-header);
+    padding: 0px 0px;
+    z-index: 100;
+}
+
+/* Positioning the top content of the main area not to be covered by the navbar */
+.main-area{
+	margin-top: 148px;
+}
+
+
+
+
+/*--------------------------------------------------------------
+Links
+--------------------------------------------------------------*/
+a {
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+Styling images and icons
+--------------------------------------------------------------*/
+
+img {
+	display: block;
+	border: 0;
+	width: 100%;
+	height: auto;
+}
+
+.icon{
+	margin: auto;
+	padding-top: 20px;
+	height: 60px;
+	width: 60px;
+}
+
+/*--------------------------------------------------------------
+Styling the heading of the project
+--------------------------------------------------------------*/
+.heading-projects{
+	background-color: var(--color-background-project-heading);
+	background-color: var();
+	padding-bottom: 40px;
+}
+.heading-projects{
+	padding: 0;
+}
+
+.heading-title{
+	color: var(--color-text-heading-title);
+	padding-top: 50px;
+}
+
+.heading-title-products{
+	color: var(--color-text-heading-title);
+	text-align: center;
+	display: flex;
+}
+
+.horisontal-line{
+	height: 40px;
+	background-color: var(--color-background-about);
+
+}
+/*--------------------------------------------------------------
+Styling the Introduction section
+--------------------------------------------------------------*/
+
+.intro,
+.about {
+	background-color: var(--color-background-about);
+	padding-bottom: 2em;
+}
+
+
+.intro-content {
+    padding: 2em;
+}
+
+.heading-content {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+}
+
+.heading-projects{
+	background-color: var(--color-bakcground-heading-projects);
+}
+
+@media screen and (min-width: 600px) {
+	.intro-text {
+		columns: 2;
+		column-gap: 4em;
+	}
+
+	.intro-text p {
+		padding-top: 0;
+	}
+}
+
+/*--------------------------------------------------------------
+Styling the Decor examples section
+--------------------------------------------------------------*/
+.projects {
+	padding: 2em 1em 1em;
+	background-color: var(--color-background-projects);
+}
+
+.projects ul {
+	margin: 0;
+	padding: 0;
+}
+
+.projects li {
+	margin-bottom: 1em;
+	background-color: var(--color-background-project);
+	list-style-type: none;
+}
+
+.project {
+	padding: 1.5em;
+}
+
+.card-label{
+	/* text-decoration: underline; */
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 0;
+	margin-bottom: 3px;
+}
+
+
+/*--------------------------------------------------------------
+Styling the About design section
+--------------------------------------------------------------*/
+.about {
+	padding: 2em;
+}
+
+
+/*--------------------------------------------------------------
+Styling the My design choices section
+--------------------------------------------------------------*/
+
+.heading-content,
+ .heading-choice{
+	background-color: var(--color-background-contact);
+	padding-bottom: 2em;
+}
+
+
+/*--------------------------------------------------------------
+Styling the products page
+--------------------------------------------------------------*/
+
+.intro-photo{
+	margin-top: 50px;
+}
+
+/* .intro-photo > img{
+	filter: drop-shadow(-10px 0px 8 px black);
+} */
+
+/* Using CSS filter on the main photo only*/
+.intro-photo > img{
+	filter: drop-shadow(-10px 0px 8px brown);
+}
+
+/* If we should apply the css filter on all the photos. This would
+also applied to the photos in the index.html file.*/
+/* img{
+	filter: drop-shadow(-10px 0px 8px brown);
+} */
+/*--------------------------------------------------------------
+Styling the projects for justifications of the screen width
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1. Use flex to create a three-project layout
+--------------------------------------------------------------*/
+
+@media screen and (min-width:1100px) {
+	@supports (display: flex) {
+
+		.projects ul {
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.projects li {
+			width: 31%;
+		}
+
+	}
+}
+
+
+/*--------------------------------------------------------------
+2. CSS Grid layout for wider screens, when browser supports grid:
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 600px) {
+	/* Layout with CSS Grid */
+	@supports (grid-area: auto) {
+
+		/* Four-column layout. Two center columns have a total max width of 50em: */
+		.grid {
+            max-width: none;
+			margin: 0;
+			display: grid;
+			grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+		}
+
+		/* Let the items use the whole width of the screen er items by placing them 
+			from and including column 1 up to and including column 6: */
+		.intro-content,
+		.heading-content,
+		.heading-projects,
+		.projects ul {
+			grid-column: 1/6;
+		}
+		/* Center items by placing them in the tree center columns, 
+		from and including column 2 up to and including column 4.: */
+		.intro-content,
+		.about-content,
+		.heading-content{
+			grid-column: 2/4;
+		}
+	}
+}

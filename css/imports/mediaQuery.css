@@ -1,0 +1,45 @@
+
+/*--------------------------------------------------------------
+Media screen, both for the font-size and margin-top of the main area
+--------------------------------------------------------------*/
+
+@media screen and (max-width: 900px) {
+	body {	
+		font-size: 16px;
+	}
+	.main-area {
+		margin-top: 130px;
+	}
+	h1 {
+		font-size: 30px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	h3 {
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	body {
+		font-size: 12px;
+	}
+	.main-area {
+		margin-top: 130px;
+	}
+	
+	h1 {
+		font-size: 20px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	h3 {
+		font-size: 15px;
+	}
+}

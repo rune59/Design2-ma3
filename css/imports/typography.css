@@ -1,0 +1,54 @@
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+
+/* The default font-size, if no @media query is in action */
+
+h1 {
+	font-size: 40px;
+	font-weight: bold;
+}
+h2 {
+	font-size: 30px; 
+}
+h3 {
+	font-size: 20px;
+}
+
+
+/* Text-align, margin and padding */
+h1,
+h2,
+h3,
+.twin p {
+	text-align: center;
+	margin: 0;
+	padding: 1em 0;
+}
+
+p {
+	/* margin: 0; */
+	/* padding: 1em 0; */
+	/* padding: 0; */
+	margin-bottom: 1em;
+}
+p.quotation{
+	font-style: italic;
+	margin-left: 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.text-indent{
+	text-indent: 50px;
+}
+
+
+.color-example-heading{
+	color: var(--color-text-decor-examples-heading);
+}
+
+li.list-numbered{
+	padding-bottom: 15px;
+}
