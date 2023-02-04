@@ -37,6 +37,7 @@ General styling
 --------------------------------------------------------------*/
 
 * {
+    box-sizing: border-box;
 	-webkit-box-sizing: border-box;    margin: 0;
     box-sizing: border-box;
 }
@@ -77,6 +78,24 @@ Links
 --------------------------------------------------------------*/
 a {
     text-decoration: none;
+}
+
+/* This styling of #about is a trick to get the link showing the 
+ sentence "Some words about good design on top of the screen
+ 
+ An alternative to using #about, is to use the <span> element directly.
+ That is how it is done below. The <span> element is actually place 
+ 140px further up on the html page. 
+ */
+
+/* #about{
+	position: relative;
+	top: -140px;
+}  */
+
+span{
+	position: relative;
+	top: -140px;
 }
 
 /*--------------------------------------------------------------

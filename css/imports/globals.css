@@ -27,7 +27,9 @@ hamburger icon and family font
 
     --color-background-header: #a64f03;
     --color-background-nav-topmenu-hover: #f2f2f2;
-    --color-background-nav-hamburger: black;
+    
+    /* The hamburger should have the same background color as the header */
+    /* --color-background-nav-hamburger: black; */
     --color-background-nav-hamburger-hover: #f2f2f2;
     --color-background-projects: lightgrey; 
     --color-background-project: white;

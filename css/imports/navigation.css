@@ -49,8 +49,10 @@ Styling the top menu as well as the hamburger menu
 nav {
   display: none;
   position: fixed;
-  top: 91px;
-  background-color: var(--color-background-nav-hamburger);
+  top: 120px;
+  /* background-color: var(--color-background-nav-hamburger); */
+  background-color: var(--color-background-header);
+
   z-index: 1000;
   right: 0px;
   text-align: left;
