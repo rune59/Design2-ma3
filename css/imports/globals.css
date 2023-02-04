@@ -9,7 +9,10 @@ hamburger icon and family font
     --color-text-underline-nav: black;
     --color-text-nav-hover: black;
     --color-text-body:#0f272f;
-    --color-text-heading-title: #f2ae30;
+    /* --color-text-heading-title: #f2ae30; */
+	--color-text-heading-title: rgba(255, 0, 93, 0.936);
+
+
     --color-text-decor-examples-heading: #f2c12e;
 
 
@@ -35,8 +38,6 @@ hamburger icon and family font
     --color-background-contact: bisque;
     --color-background-footer: #a64f03;
     --color-background-footer-hover:#f2f2f2;
-
-    --font-family-1:Latin, Geneva, Tahoma, sans-serif;
 }
 
 

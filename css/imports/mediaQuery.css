@@ -43,3 +43,49 @@ Media screen, both for the font-size and margin-top of the main area
 		font-size: 15px;
 	}
 }
+
+
+/*--------------------------------------------------------------
+Media queries for the hamburger menu
+--------------------------------------------------------------*/
+
+
+/* This is where the hamburger menu becomes visible */
+@media (min-width: 1135px) {
+    nav {
+        display: block;
+        position: static;
+        font-size: 1em;
+        background: none;
+    }
+
+    nav li {
+        display: inline-block;
+        padding: 0 50px 0 50px;
+    }
+
+    header label {
+        display: none;
+    }
+}
+
+/* Adapting the font size of the hamburger menu */
+@media (max-width: 800px) {
+    nav li,
+    nav a{
+        font-size: 13px;
+    }
+}
+@media (max-width: 500px) {
+    nav li,
+    nav a{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 300px) {
+    nav li,
+    nav a{
+        font-size: 8px;
+    }
+}
