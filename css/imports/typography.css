@@ -6,8 +6,7 @@ Typography
 /* The default font-size, if no @media query is in action */
 
 :root{
-	/* --font-family-1: Geneva, Tahoma, sans-serif; */
-	--font-family-1: EB Garamond, Tahoma, sans-serif;
+	--font-family-1: "EB Garamond", Tahoma, sans-serif;
 }
 
 
