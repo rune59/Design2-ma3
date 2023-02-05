@@ -1,5 +1,5 @@
 .footer{
-    height: 250px;
+    height: 150px;
     bottom: 0;
     font-size: 20px;
 }
@@ -62,7 +62,7 @@
 .footer-content-left{
     margin-top: 20px;
     margin-bottom: 20px;
-}
+}5
 .writer p{
     color: var(--color-text-footer);
 }

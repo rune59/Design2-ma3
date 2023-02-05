@@ -168,20 +168,26 @@ Media queries for the hamburger menu
 /* Adapting the font size of the hamburger menu */
 @media (max-width: 800px) {
     nav li,
-    nav a{
+    nav a, 
+	.writer,
+	.footer-content-left li a{
         font-size: 13px;
     }
 }
 @media (max-width: 500px) {
     nav li,
-    nav a{
+    nav a,
+	.writer,
+	.footer-content-left li a{
         font-size: 10px;
     }
 }
 
 @media (max-width: 300px) {
     nav li,
-    nav a{
+    nav a,
+	.writer,
+	.footer-content-left li a{
         font-size: 8px;
     }
 }
