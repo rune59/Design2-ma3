@@ -15,7 +15,7 @@ Typography
 h1 {
 	font-size:30px;
 	/* font-weight: bold; */
-	font-family: EB Garamond, serif;
+	font-family: "EB Garamond", serif;
 	color: rgba(255, 0, 93, 0.936);
 }
 h2 {
